@@ -1,0 +1,267 @@
+﻿Page number
+1
+School of Physics, Engineering and Technology
+ELE00098H Robotics Design and Construction Assessment
+2024/25
+Summary Details
+This assessment (Construction and Autonomy of Mobile Robot) contributes 100% of the
+assessment for this module.
+Clearly indicate your Exam Number on every separate piece of work submitted.
+Submission is via VLE and is due by 12:00 on 13 January 2023 (Semester 1 Common
+Assessment Period, Monday) as found on the Statement of Assessment. Please try and
+submit early as any late submissions will be penalised. Assessment information including on
+late penalties is given in the Statement of Assessment.
+Academic Integrity
+It is your responsibility to ensure that you understand and comply with the University’s policy on
+academic integrity. If this is your first year of study at the University then you also need to
+complete the mandatory Academic Integrity Tutorial. Further information is available at
+http://www.york.ac.uk/integrity/.
+In particular please note:
+Unless the coursework specifies a group submission, you should assume that all
+submissions are individual and should therefore be your own work.
+All assessment submissions are subject to the Department’s policy on plagiarism and,
+wherever possible, will be checked by the Department using Turnitin software.
+Construction and Autonomy of Mobile Robot
+You are required to create a robot that can map and efficiently solve a maze that will be
+constructed in the robot lab. You will also need to prepare and deliver a 5-minute presentation
+on your robot design and the algorithm you have implemented for mapping and navigating the
+maze. Test mazes will be available with which you can develop and improve your algorithms,
+but one of the mazes that your robot will be evaluated on will not be revealed until the
+evaluation session at the end. This will also test the generality of your approach.
+First, you will need to build a differential-drive robot with sensors that can detect and navigate
+around obstacles. You have the use of a robotics kit that includes an Arduino Nano 33 BLE
+microcontroller module, an Arduino Robotics Board (ARB) that provides easy-to-use sensor and
+actuator interfaces, a Pololu TB6612FNG dual motor driver, a set of infrared and ultrasonic
+range sensors, a set of micro-metal gear motors with encoders, wheels that fit on the motors,
+and other parts that can be used for constructing a small mobile robot. To assemble and
+program your robot please refer to the laboratory documentation and resources for assembly
+guidance and tips.
+You are permitted to customize your robot as much as you want as time permits before the
+assessment. You can change the body design and add additional microcontrollers, actuators,
+sensors, and other components from those available in the robot laboratories to improve the
+performance of your robot. However, you must ask the technical staff for access to additional
+components beyond those available in the robot kit and fabrication of additional parts beyond
+those required for basic functionality, and your final robot must conform to any and all safety or
+cost requirements imposed by the technical staff to be eligible for credit in the demonstration.
+The project is split into four phases plus a presentation and demonstration of your robot’s
+performance, and the practical lab sessions during the module are designed so as to be part of
+your work in completing this navigating robot, so it is important that you complete all of the lab
+exercises. Please note that your program code must be submitted along with other materials
+and is part of the assessment grading, so make sure to adhere to good coding practices:
+comment your code so as to be clear and easy for others to understand, and if you have used
+code from other sources e.g. github or online forums include complete references to where
+you obtained the code in your comments as well.
+A navigable course environment will be set up in the P/T/410 Robot Lab for your use. An
+example layout of a course with tags of various kinds to aid in navigation is provided in Figure 1
+below. You are expected to show your robot's performance on both the course provided as an
+example in the module laboratory sessions, and also a new course which will not be available
+until the assessment demonstration date. Your robot’s build quality and performance and your
+presentation together will be assessed after the hand-in date and graded out of 100 points.
+Phase 1: Construction of a Differential-Drive Robot Chassis
+You will need to design and construct a mobile robot chassis on which to mount the Arduino
+Robotics Board and electronics, battery pack, two motors, and a downward-pointing camera.
+The lectures on 2-D and 3-D design will provide guidance on what key components are needed
+and how to make them. It’s your design, so think creatively and try to customize your robot to
+be unique and perform the task as well as it can! This phase is intended to be performed in the
+P/T/410 lab as you will have the use of laser cutting and FDM resources. The quality and
+functionality of your robot chassis will constitute 20% of the assessment grade, broken down
+into:
+5% for Functionality (does it move optimally as desired and not break?);
+5% for Usability (is it easy to build, deploy, and operate?);
+5% for Efficient use of material (no thicker parts than needed, no superfluous parts)?;
+5% for Design quality and ambition (is it well-designed with obvious effort in adding e.g.
+optimal design for the task, smoothed edges, nice shapes for decoration, etc?).
+Phase 2: Obstacle Detection and Avoidance using Range Sensors
+You will need to write sensor reading and algorithm to allow your robot to follow taped lines on
+the floor of the robot lab. You will now need to write a controller that uses the range sensors
+and wheel odometry to travel from a start point to a destination point. You should be using
+multiple sensors to increase accuracy and angle of sensing, and also track the approximate
+locations of objects found by your sensors in a graph, map, or other structure for later use in
+planning an optimal path. You can use any algorithm you feel is appropriate from the course
+content. The performance of your controller in travelling between the start and end points in the
+environment will be assessed in the presentation and demonstration and will constitute 20% of
+the assessment grade, broken down into:
+10% for the quality of the control of your robot in avoiding obstacles and finding a clear
+path;
+10% for the quality of code, clarity of writing/commenting, and originality of your
+movement control algorithms.
+Phase 3: Robot Controller and Maze Solution
+You will now need to write a controller that uses the array of sensors that you have chosen to
+use to follow the maze from the start point until the end point on the opposite side of the maze is
+reached. In addition, your controller will have to map the maze as the robot moves through it
+using wheel odometry and range sensor feedback to increase accuracy. You can use any
+algorithm you feel is appropriate, and the lectures on robot navigation and mapping will help to
+guide your approach. You are not required to implement a full SLAM system – simply building
+an approximate map as you move and following walls to the opposite side of the maze will work
+too, but if you follow the module materials carefully and accomplish SLAM with your robot, you
+will do very well in the assessment! The performance of your controller in solving the maze will
+constitute 20% of the assessment grade, broken down into:
+10% for the optimality and efficiencyof the path found (is it a good solution and did it find
+the goal quickly?);
+10% for the quality of code, clarity of writing/commenting, and originality of your
+navigation algorithms.
+Phase 4: Traversing Optimal Path Through the Maze
+The last task for your robot control system will be to traverse the maze again immediately from
+the end to the start, but this time by using an optimal path automatically determined by
+analyzing the map that your controller has generated in the first run through the maze.
+Algorithms that you can use for finding the optimal (or near-optimal) path through the maze will
+be suggested in the lectures on robot navigation. The speed and consistency with which your
+controller finds the optimal path back through the maze will constitute 20% of the assessment
+grade broken down into:
+10% for the speed of the path following and accuracy of following the stored map
+(essentially the speed at which the robot returns);
+10% for the quality of code, clarity of writing/commenting, and originality of your optimal
+path finding and following algorithms.
+Phase 5: Presentation and Technical Assessment
+The performance of your navigation algorithm will be assessed in a laboratory test session in
+the last week of term. In addition, you will need to present your design and approach that you
+have implemented in a 5 minute presentation per person with 2 minutes for questions
+afterwards. Your presentation will constitute 20% of the assessment grade, broken down into:
+5% for presentation quality (slide visuals and organization)
+5% for ambition (the complexity and depth of thought into your approach)
+10% for attendance in lab sessions from Weeks 2-11.
+Deliverables:
+To receive full credit in this assessment, you must submit the following items in a single .zip
+file, to the “Assignment Submission Point” provided on the module VLE site, by the
+deadline date and time given on the cover sheet of this assessment:
+Your CAD design files and labeled part drawings for your robot as described in Phase 1
+Functioning and commented code files for obstacle detection and avoidance for Phase 2
+Functioning and commented code files for performing control and navigation in Phase 3
+Functioning and commented code files for performing mapping and planning in Phase 4
+Your presentation slides for the presentation in Phase 5
+You must also give your presentation and demonstrate the following on the mobile robot in the
+final presentation and demonstration which is scheduled after the deadline date above.
+Basic movement of the mobile robot forward, backward, and turning left and right
+Detection and localization of objects relative to the robot with estimated position
+Autonomous navigation of the robot around obstacles to a goal using sensors
+Mapping of obstacles and navigation of the robot back to the start using path planning
+Feedback template attached.
+
+
+Assessment overview
+You are required to create a robot that can map and efficiently solve a maze that will be constructed in the robot lab. You will also need to prepare and deliver a 5-minute presentation on your robot design and the algorithm you have implemented for mapping and navigating the maze. Test mazes will be available with which you can develop and improve your algorithms, but one of the mazes that your robot will be evaluated on will not be revealed until the evaluation session at the end. This will also test the generality of your approach.
+
+
+First, you will need to build a differential-drive robot with sensors that can detect and navigate around obstacles. You have the use of a robotics kit that includes an Arduino Nano 33 BLE microcontroller module, an Arduino Robotics Board (ARB) that provides easy-to-use sensor and actuator interfaces, a Pololu TB6612FNG dual motor driver, a set of infrared and ultrasonic range sensors, a set of micro-metal gear motors with encoders, wheels that fit on the motors, and other parts that can be used for constructing a small mobile robot. To assemble and program your robot please refer to the laboratory documentation and resources for assembly guidance and tips.
+
+
+You are permitted to customize your robot as much as you want as time permits before the assessment. You can change the body design and add additional microcontrollers, actuators, sensors, and other components from those available in the robot laboratories to improve the performance of your robot. However, you must ask the technical staff for access to additional components beyond those available in the robot kit and fabrication of additional parts beyond those required for basic functionality, and your final robot must conform to any and all safety or cost requirements imposed by the technical staff to be eligible for credit in the demonstration.
+
+
+The project is split into four phases plus a presentation and demonstration of your robot’s performance, and the practical lab sessions during the module are designed so as to be part of your work in completing this navigating robot, so it is important that you complete all of the lab exercises. Please note that your program code must be submitted along with other materials and is part of the assessment grading, so make sure to adhere to good coding practices: comment your code so as to be clear and easy for others to understand, and if you have used code from other sources e.g. github or online forums include complete references to where you obtained the code in your comments as well.
+
+
+A navigable course environment will be set up in the P/T/410 Robot Lab for your use. An example layout of a course with tags of various kinds to aid in navigation is provided in Figure 1 below. You are expected to show your robot's performance on both the course provided as an example in the module laboratory sessions, and also a new course which will not be available until the assessment demonstration date. Your robot’s build quality and performance and your presentation together will be assessed after the hand-in date and graded out of 100 points.
+
+
+Task
+
+
+Length
+
+
+% of module mark
+
+
+Presentation (Slides Uploaded to Assessment Submission Point)
+
+
+5 Minutes for Presentation, ~2 Minutes for Questions
+
+
+20%
+
+
+Demonstration (Program Code Uploaded to Assessment Submission Point)
+
+
+10 Minutes for Robot To Navigate Through Both Courses from Start to End and Back
+
+
+70%
+
+
+​Attendance at labs (for weeks 2-11)​
+
+
+​Noted in Labs by Demonstrators
+
+
+​10%​
+
+
+
+
+
+
+Assessment task details
+Phase 1: Construction of a Differential-Drive Robot Chassis
+You will need to design and construct a mobile robot chassis on which to mount the Arduino Robotics Board and electronics, battery pack, two motors, and sensors. The lectures on 2-D and 3-D design will provide guidance on what key components are needed and how to make them. It’s your design, so think creatively and try to customize your robot to be unique and perform the task as well as it can! This phase is intended to be performed in the P/T/410 lab as you will have the use of laser cutting and FDM resources. The quality and functionality of your robot chassis will constitute 20% of the assessment grade, broken down into:
+
+
+5% for Functionality (does it move optimally as desired and not break?);
+5% for Usability (is it easy to build, deploy, and operate?);
+5% for Efficient use of material (no thicker parts than needed, no superfluous parts)?;
+5% for Design quality and ambition (is it well-designed with obvious effort in adding e.g. optimal design for the task, smoothed edges, nice shapes for decoration, etc?).
+Phase 2: Obstacle Detection and Avoidance using Range Sensors
+You will need to write sensor reading and algorithm to allow your robot to follow taped lines on the floor of the robot lab. You will now need to write a controller that uses the range sensors and wheel odometry to travel from a start point to a destination point. You should be using multiple sensors to increase accuracy and angle of sensing, and also track the approximate locations of objects found by your sensors in a graph, map, or other structure for later use in planning an optimal path. You can use any algorithm you feel is appropriate from the course content. The performance of your controller in travelling between the start and end points in the environment will be assessed in the presentation and demonstration and will constitute 20% of the assessment grade, broken down into:
+
+
+10% for the quality of the control of your robot in avoiding obstacles and finding a clear path;
+10% for the quality of code, clarity of writing/commenting, and originality of your movement control algorithms.
+Phase 3: Robot Controller and Maze Solution
+You will now need to write a controller that uses the array of sensors that you have chosen to use to follow the maze from the start point until the end point on the opposite side of the maze is reached. In addition, your controller will have to map the maze as the robot moves through it using wheel odometry and range sensor feedback to increase accuracy. You can use any algorithm you feel is appropriate, and the lectures on robot navigation and mapping will help to guide your approach. You are not required to implement a full SLAM system – simply building an approximate map as you move and following walls to the opposite side of the maze will work too, but if you follow the module materials carefully and accomplish SLAM with your robot, you will do very well in the assessment! The performance of your controller in solving the maze will constitute 20% of the assessment grade, broken down into:
+
+
+10% for the optimality and efficiencyof the path found (is it a good solution and did it find the goal quickly?);
+10% for the quality of code, clarity of writing/commenting, and originality of your navigation algorithms.
+Phase 4: Traversing Optimal Path Through the Maze
+The last task for your robot control system will be to traverse the maze again immediately from the end to the start, but this time by using an optimal path automatically determined by analyzing the map that your controller has generated in the first run through the maze. Algorithms that you can use for finding the optimal (or near-optimal) path through the maze will be suggested in the lectures on robot navigation. The speed and consistency with which your controller finds the optimal path back through the maze will constitute 20% of the assessment grade broken down into:
+
+
+10% for the speed of the path following and accuracy of following the stored map (essentially the speed at which the robot returns);
+10% for the quality of code, clarity of writing/commenting, and originality of your optimal path finding and following algorithms.
+Phase 5: Presentation and Technical Assessment
+The performance of your navigation algorithm will be assessed in a laboratory test session in the last week of term. In addition, you will need to present your design and approach that you have implemented in a 5 minute presentation per person with 2 minutes for questions afterwards. Your presentation will constitute 20% of the assessment grade, broken down into:
+
+
+5% for presentation quality (slide visuals and organization)
+5% for ambition (the complexity and depth of thought into your approach)
+10% for technical quality and correctness (algorithm and robot appropriate, algorithm implemented correctly, critical thinking and good design methods employed).
+ Deliverables:
+To receive full credit in this assessment, you must submit the following items in a single .zip file, to the “Assignment Submission Point” provided on the module VLE site, by the deadline date and time given on the cover sheet of this assessment:
+
+
+Your CAD design files and labeled part drawings for your robot as described in Phase 1
+Functioning and commented code files for obstacle detection and avoidance for Phase 2
+Functioning and commented code files for performing control and navigation in Phase 3
+Functioning and commented code files for performing mapping and planning in Phase 4
+Your presentation slides for the presentation in Phase 5
+You must also give your presentation and demonstrate the following on the mobile robot in the final presentation and demonstration which is scheduled after the deadline date above.
+
+
+Basic movement of the mobile robot forward, backward, and turning left and right
+Detection and localization of objects relative to the robot with estimated position
+Autonomous navigation of the robot around obstacles to a goal using sensors
+Mapping of obstacles and navigation of the robot back to the start using path planning
+Exceptional circumstances affecting assessment
+Sometimes things happen that can seriously impair your performance in an assessment or prevent you undertaking the assessment at the scheduled time. If these events are unforeseeable and exceptional (ie serious and unusual) you may be able to defer an assessment or take it again. 
+
+
+Find out more about claiming extenuating circumstances.
+
+
+Deadlines & late assignment submissions
+Make sure to leave yourself enough time to deal with any technical issues and submit your work before the deadline.
+
+
+Unless you have exceptional circumstances, penalties are applied for late submission - even one second after the deadline. Find out more in the Guide to Assessment [or programme handbook].
+
+
+Where to get help with assessments
+Questions about the assessment task or where/how to submit: contact module staff
+Technical help with the VLE: email vle-support@york.ac.uk 
+Useful resources
+IEEE referencing style guide (from relevant Style Guides)
+Academic Writing Practical Guide (especially the Assessment & feedback page)
+Book a 1:1 appointment to discuss your work with the Writing Centr
